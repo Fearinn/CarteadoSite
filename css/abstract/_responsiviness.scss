@@ -1,0 +1,33 @@
+@media screen and (min-width: 1024px) {
+    .header {
+        flex-direction: row;
+        font-size: 1rem;
+        justify-content: space-between;
+
+        .logo {
+            border: none;
+            margin-right: 1rem;
+
+            &__name {
+                max-width: 250px;
+            }
+        }
+
+        .menu {
+            flex-direction: row;
+            justify-content: space-around;
+
+            &__link {
+                border: none;
+                padding: 0.5rem;
+                margin-right: 1rem;
+                width: auto;
+                white-space: nowrap;
+            }
+        }
+        .sociais {
+            max-width: 25%;
+        }
+    }
+
+}
