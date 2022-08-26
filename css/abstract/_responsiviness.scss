@@ -5,32 +5,68 @@
         justify-content: space-between;
 
         .logo {
+            justify-content: start;
             border: none;
             margin-right: 1rem;
+            width: auto;
 
-            &__name {
-                max-width: 250px;
+            &__img {
+                margin-right: 2rem;
             }
         }
+
 
         .menu {
             flex-direction: row;
             justify-content: space-around;
 
-            &__link {
-                border: none;
-                padding: 0.5rem;
-                margin-right: 1rem;
-                width: auto;
-                white-space: nowrap;
-                &:hover {
-                    border-bottom: 5px solid $color2;
+
+            &__button {
+                display: none;
+            }
+
+            &__container {
+                justify-content: end;
+                max-width: 25%;
+
+                .menu__socials {
+                    width: 100%;
+                }
+            }
+
+            .menu__options {
+                display: flex;
+                flex-direction: row;
+                flex-grow: 1;
+                justify-content: space-around;
+                background: none;
+
+                &__option {
+                    border: none;
+                    color: $color2;
+                    padding: 0.5rem 0;
+                    margin-right: 1rem;
+                    white-space: nowrap;
+                    width: auto;
+
+                    &:first-child {
+                        border-top: none;
+                    }
+
+                    &:hover {
+                        border-bottom: 5px solid $color2;
+                    }
+
                 }
             }
         }
+
         .sociais {
             max-width: 25%;
         }
     }
 
+    .closed {
+        display: flex;
+    }
 }
