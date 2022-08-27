@@ -27,18 +27,23 @@
             <h1 class="logo__name">Carteado Challenges</h1>
         </a>
         <nav class="menu">
-            <div class="menu__options closed"  data-options='header'>
-                <a arial-label="skip to 'about us'" href="" class="menu__options__option">About us</a>
-                <a arial-label="skip to 'tournaments'" href="" class="menu__options__option">Tournaments</a>
+            <div class="menu__options closed" data-options='header'>
+                <a arial-label="go to tournaments page" href="https://play.limitlesstcg.com/organizer/54"
+                    class="menu__options__option">Play</a>
+                <a arial-label="skip to 'about'" href="#about" class="menu__options__option">About</a>
                 <a aria-label="skip to 'partners'" href="" class="menu__options__option">Partners</a>
-                <a aria-label="skip to 'partners'" href="" class="menu__options__option">Contact</a>
+                <a aria-label="skip to 'promo codes'" href="" class="menu__options__option">Promo codes</a>
+                <a aria-label="skip to 'contact'" href="" class="menu__options__option">Contact</a>
             </div>
 
             <div class="menu__container">
-                <button aria-label="open options" class="menu__button" data-button="header"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                    width="26" height="26"
-                    viewBox="0 0 26 26"
-                    style=" fill:#1B1A17;"><path d="M 0 4 L 0 6 L 26 6 L 26 4 Z M 0 12 L 0 14 L 26 14 L 26 12 Z M 0 20 L 0 22 L 26 22 L 26 20 Z"></path></svg></button>
+                <button aria-label="open options" class="menu__button" data-button="header"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 26 26"
+                        style=" fill:#1B1A17;">
+                        <path
+                            d="M 0 4 L 0 6 L 26 6 L 26 4 Z M 0 12 L 0 14 L 26 14 L 26 12 Z M 0 20 L 0 22 L 26 22 L 26 20 Z">
+                        </path>
+                    </svg></button>
                 <div class="menu__socials">
                     <a arial-label="Twitch" href="#" class="menu__socials__social"><svg
                             xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
@@ -67,39 +72,35 @@
     </header>
 
     <main class="main">
-        <section class="about">
-            <h2 class="about__title">About Us</h1>
-                <div class="about__cards">
-                    <div class="about__card mission">
-                        <h3 class="mission__title">Carteado's mission</h3>
-                        <p class="mission__text">
-                            Pokémon Trading Card Game is one of the most popular card games of the world. Althought,
-                            many
-                            people can't pay for new cards all the time,
-                            or have to travel to other cities and states to find opponents.</p>
-
-                        <p class="mission__text">Our goal with the online tournaments is to give these people a new way
-                            to
-                            play Pokémon TCG, but also to
-                            create a competitive
-                            and health environment for professional, casual and beginner players.
-                        </p>
-                    </div>
-                    <div class="about__card ">
-                        <h3 class="who__title">
-                            Who is behind Carteado?</h3>
-                        <p class="who__text">Carteado was founded in January, 2021, by four Brazilian friends: Wesley
-                            Dantas
-                            (SHSuperSonic),
-                            Matheus Gomes (Fearinn), Marcos Bispo (Marck361) and João Silva (DeckInseto), who still
-                            manage
-                            the organization together.
-                        </p>
-                        <p class="who__text">We can say we're content creators and tournament organizers, but, more than
-                            anything,
-                            we're just Pokémon fans, members of a strong and growing community.</p>
-                    </div>
+        <section id="about" class="about">
+            <h2 class="about__title">About Us</h2>
+            <div class="about__cards">
+                <div class="about__card">
+                    <h3 class="about__title">Carteado's mission</h3>
+                    <p class="about__text">Even thought IRL card games are great, many people don't have acess to them, for multiple reasons. 
+                        With this in mind, Carteado tries to build a competitive, health and acessible way to play Pokémon TCG from 
+                        your own house.
+                    </p>
                 </div>
+                <div class="about__card ">
+                    <h3 class="about__title">
+                        Online Tournaments</h3>
+                    <p class="about__text">Carteado run weekly Pokémon Trading Card Game online tournaments,
+                        always with free entry and generally open for everyone from anywhere. All events are run through
+                        the <a class="about__link">Limitless Online Tournament Platform</a>.
+                </div>
+                <div class="about__card ">
+                    <h3 class="about__title">
+                        Who is behind Carteado?</h3>
+                    <p class="about__text">Carteado was founded in January, 2021, by four Brazilian friends,
+                        who still
+                        manage it together: Wesley
+                        Dantas (SHSuperSonic),
+                        Matheus Gomes (Fearinn), Marcos Bispo (Marck361) and João Silva (DeckInseto).
+                    </p>
+                </div>
+                <img src="imgs/cardsbg.webp" alt="" class="about__bg">
+            </div>
         </section>
     </main>
     <script src="js/main.js" type="module"></script>
