@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   background-color: #1B1A17;
   overflow-x: hidden;
 }
@@ -16,12 +17,20 @@ h1, h2, h3 {
   letter-spacing: 0.1ch;
 }
 
+a {
+  color: inherit;
+}
+
+b {
+  font-weight: bold;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-image: linear-gradient(to right, #FFFFFF, #c7c6c5);
+  background-image: linear-gradient(to right, #EEEEEE, #FFFFFF);
   font-weight: bold;
   height: auto;
   padding: 0 1rem;
@@ -53,7 +62,7 @@ h1, h2, h3 {
   text-align: left;
 }
 .header .logo__name:hover {
-  background-image: linear-gradient(to right, #1B1A17, #fad014, #FF8C32);
+  background-image: linear-gradient(to right, #1B1A17, #FF8C32, #fad014);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -62,7 +71,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   height: 100%;
   padding: 0rem 0.5rem 0 0.5rem;
   width: 100%;
@@ -71,13 +80,13 @@ h1, h2, h3 {
   display: none;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(to right, #FFFFFF, #c7c6c5);
+  background-image: linear-gradient(to right, #EEEEEE, #FFFFFF);
   padding: 0.5rem 1rem 1rem 1rem;
   width: calc(100% - 1rem);
 }
 .header .menu__options__option {
   display: flex;
-  border-bottom: 2px solid #1B1A17;
+  border-bottom: 0.5px solid #1B1A17;
   box-sizing: border-box;
   color: #1B1A17;
   padding: 1rem 0.5rem;
@@ -110,9 +119,13 @@ h1, h2, h3 {
 .header .menu__container .menu__socials__social {
   margin-right: 0.5rem;
   height: 24px;
+  transition: all 0.2s;
 }
 .header .menu__container .menu__socials__social:hover {
   transform: translateY(-50%);
+}
+.header .menu__container .menu__socials #pt-br::after {
+  content: "U+1f1e7";
 }
 
 @media screen and (min-width: 1024px) {
@@ -120,6 +133,10 @@ h1, h2, h3 {
     flex-direction: row;
     font-size: 1rem;
     justify-content: space-between;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
   }
   .header .logo {
     justify-content: start;
@@ -173,7 +190,7 @@ h1, h2, h3 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-image: linear-gradient(to right, #FFFFFF, #c7c6c5);
+  background-image: linear-gradient(to right, #EEEEEE, #FFFFFF);
   font-weight: bold;
   height: auto;
   padding: 0 1rem;
@@ -205,7 +222,7 @@ h1, h2, h3 {
   text-align: left;
 }
 .header .logo__name:hover {
-  background-image: linear-gradient(to right, #1B1A17, #fad014, #FF8C32);
+  background-image: linear-gradient(to right, #1B1A17, #FF8C32, #fad014);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -214,7 +231,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   height: 100%;
   padding: 0rem 0.5rem 0 0.5rem;
   width: 100%;
@@ -223,13 +240,13 @@ h1, h2, h3 {
   display: none;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(to right, #FFFFFF, #c7c6c5);
+  background-image: linear-gradient(to right, #EEEEEE, #FFFFFF);
   padding: 0.5rem 1rem 1rem 1rem;
   width: calc(100% - 1rem);
 }
 .header .menu__options__option {
   display: flex;
-  border-bottom: 2px solid #1B1A17;
+  border-bottom: 0.5px solid #1B1A17;
   box-sizing: border-box;
   color: #1B1A17;
   padding: 1rem 0.5rem;
@@ -262,9 +279,13 @@ h1, h2, h3 {
 .header .menu__container .menu__socials__social {
   margin-right: 0.5rem;
   height: 24px;
+  transition: all 0.2s;
 }
 .header .menu__container .menu__socials__social:hover {
   transform: translateY(-50%);
+}
+.header .menu__container .menu__socials #pt-br::after {
+  content: "U+1f1e7";
 }
 
 @media screen and (min-width: 1024px) {
@@ -272,6 +293,10 @@ h1, h2, h3 {
     flex-direction: row;
     font-size: 1rem;
     justify-content: space-between;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
   }
   .header .logo {
     justify-content: start;
@@ -320,17 +345,10 @@ h1, h2, h3 {
     max-width: 25%;
   }
 }
-.about {
-  color: #c7c6c5;
-  height: auto;
-  padding: 1rem 0;
-  position: relative;
-}
-.about img {
+.section__bg {
   display: inline-block;
-  border-radius: 10px;
   height: 100%;
-  opacity: 0.2;
+  opacity: 0.1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -339,13 +357,36 @@ h1, h2, h3 {
   width: 100%;
   z-index: -1;
 }
-.about .about__title {
+
+.main-images {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.main-images .set-image {
+  flex-grow: 1;
+  border-radius: 8px;
+  max-height: 350px;
+  max-width: calc(100% - 2rem);
+  margin-top: 0.5rem;
+}
+
+.section {
+  color: #EEEEEE;
+  height: auto;
+  padding: 1rem 0;
+  position: relative;
+}
+.section__title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: center;
 }
-.about__cards {
+.section .twitter-timeline {
+  width: 80%;
+}
+.section__cards {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -354,38 +395,67 @@ h1, h2, h3 {
   margin: 0 1rem;
   width: calc(100% - 2rem);
 }
-.about__cards .about__card {
+.section__cards .section__card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex-grow: 1;
   color: #1B1A17;
   border-radius: 8px;
   margin-top: 0.5rem;
   padding: 1rem 1rem;
-  background-image: linear-gradient(to right, #FFFFFF, #c7c6c5);
-  max-width: 300px;
+  background-image: linear-gradient(to right, #EEEEEE, #FFFFFF);
 }
-.about__cards .about__card:first-child {
+.section__cards .section__card:first-child {
   margin-top: 0;
 }
-.about__cards .about__card h3 {
+.section__cards .section__card__title {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
-.about__cards .about__card p {
+.section__cards .section__card__text {
+  align-self: start;
   line-height: 150%;
   font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.section__cards .section__card .logo-atreeyo {
+  display: block;
+  height: 80px;
+  max-width: 60%;
+  margin: 1rem auto 0 auto;
+}
+.section__cards .section__card .logo-metafy {
+  display: block;
+  height: 80px;
+  max-width: 25%;
+  margin: 1rem auto 0 auto;
+}
+.section__cards .section__card .logo-PBN {
+  display: block;
+  height: 100px;
+  max-width: 60%;
+  margin: 1rem auto 0 auto;
 }
 
 @media screen and (min-width: 800px) {
-  .about__cards {
+  .main-images .set-image {
+    display: inline-block;
+    max-width: 45%;
+    height: 25rem;
+    margin: 1rem 0;
+  }
+  .section .twitter-timeline {
+    width: 25%;
+  }
+  .section .section__cards {
     flex-direction: row;
     justify-content: space-around;
     min-height: 0px;
   }
-  .about__cards .about__card {
+  .section .section__cards .section__card {
     max-width: calc(33% - 4rem);
     margin-top: 0;
     min-height: 100%;

@@ -8,12 +8,6 @@
     <title>Carteado Challenges - Online Pokémon TCG Tournaments</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/abstract/reset.css">
@@ -21,6 +15,7 @@
 </head>
 
 <body>
+    <img src="imgs/cardsbg.webp" alt="" class="section__bg">
     <header class="header">
         <a href="#" class="logo">
             <div class="logo__img"></div>
@@ -28,12 +23,12 @@
         </a>
         <nav class="menu">
             <div class="menu__options closed" data-options='header'>
-                <a arial-label="go to tournaments page" href="https://play.limitlesstcg.com/organizer/54"
+                <a aria-label="go to tournaments page" href="https://play.limitlesstcg.com/organizer/54"
                     class="menu__options__option">Play</a>
-                <a arial-label="skip to 'about'" href="#about" class="menu__options__option">About</a>
-                <a aria-label="skip to 'partners'" href="" class="menu__options__option">Partners</a>
-                <a aria-label="skip to 'promo codes'" href="" class="menu__options__option">Promo codes</a>
-                <a aria-label="skip to 'contact'" href="" class="menu__options__option">Contact</a>
+                <a aria-label="skip to 'about'" href="#about" class="menu__options__option">About</a>
+                <a aria-label="skip to 'partners'" href="#partners" class="menu__options__option">Partners</a>
+                <a aria-label="skip to 'contact'" href="#contact" class="menu__options__option">Contact</a>
+                <a aria-label="change to Portuguese (mudar para Português)" href="#" class="menu__options__option" id="pt-br">PT-BR</a>
             </div>
 
             <div class="menu__container">
@@ -45,21 +40,21 @@
                         </path>
                     </svg></button>
                 <div class="menu__socials">
-                    <a arial-label="Twitch" href="#" class="menu__socials__social"><svg
+                    <a aria-label="go to Twitch channel" href="#" class="menu__socials__social"><svg
                             xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                             viewBox="0 0 24 24" style=" fill:#1B1A17;">
                             <path
                                 d="M 5.3632812 2 L 2 6.6367188 L 2 20 L 7 20 L 7 23 L 10 23 L 13 20 L 17 20 L 22 15 L 22 2 L 5.3632812 2 z M 6 4 L 20 4 L 20 13 L 17 16 L 12 16 L 9 19 L 9 16 L 6 16 L 6 4 z M 11 7 L 11 12 L 13 12 L 13 7 L 11 7 z M 16 7 L 16 12 L 18 12 L 18 7 L 16 7 z">
                             </path>
                         </svg></a>
-                    <a arial-label="Twitter" href="#" class="menu__socials__social"><svg
+                    <a aria-label="go to Twitter page" href="#" class="menu__socials__social"><svg
                             xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                             viewBox="0 0 30 30" style=" fill:#1B1A17;">
                             <path
                                 d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
                             </path>
                         </svg></a>
-                    <a arial-label="Discord" href="#" class="menu__socials__social"><svg
+                    <a aria-label="go to Discord server" href="#" class="menu__socials__social"><svg
                             xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                             viewBox="0 0 50 50" style=" fill:#1B1A17;">
                             <path
@@ -71,37 +66,98 @@
         </nav>
     </header>
 
-    <main class="main">
-        <section id="about" class="about">
-            <h2 class="about__title">About Us</h2>
-            <div class="about__cards">
-                <div class="about__card">
-                    <h3 class="about__title">Carteado's mission</h3>
-                    <p class="about__text">Even thought IRL card games are great, many people don't have acess to them, for multiple reasons. 
-                        With this in mind, Carteado tries to build a competitive, health and acessible way to play Pokémon TCG from 
+    <main class="content">
+        <div class="main-images">
+            <img src="imgs/Top-Pokemon-cards-from-the-Sword-Shield-Lost-Origin.jpg" alt="" class="set-image">
+            <img src="imgs/PTCGO.jpg" alt="" class="set-image">
+        </div>
+
+        <section class="section">
+            <h2 id="about" class="section__title">About us</h2>
+            <div class="section__cards">
+                <div class="section__card">
+                    <h3 class="section__card__title mission">Carteado's mission</h3>
+                    <p class="section__card__text misson">Even thought IRL card games are great, many people don't have
+                        acess to them,
+                        for multiple reasons.
+                        With this in mind, Carteado tries to build a competitive, health and acessible way to play
+                        Pokémon TCG from
                         your own house.
                     </p>
                 </div>
-                <div class="about__card ">
-                    <h3 class="about__title">
-                        Online Tournaments</h3>
-                    <p class="about__text">Carteado run weekly Pokémon Trading Card Game online tournaments,
-                        always with free entry and generally open for everyone from anywhere. All events are run through
-                        the <a class="about__link">Limitless Online Tournament Platform</a>.
+                <div class="section__card">
+                    <h3 class="section__card__title">
+                        PTCG Online Tournaments</h3>
+                    <p class="section__card__text">Carteado runs weekly Pokémon Trading Card Game online tournaments,
+                        always with free entry and generally open for everyone from anywhere. All events are managed
+                        through
+                        the <a href='https://play.limitlesstcg.com/' class="section__card__link">Limitless Online
+                            Tournament
+                            Platform</a>.
                 </div>
-                <div class="about__card ">
-                    <h3 class="about__title">
+                <div class="section__card ">
+                    <h3 class="section__card__title">
                         Who is behind Carteado?</h3>
-                    <p class="about__text">Carteado was founded in January, 2021, by four Brazilian friends,
+                    <p class="section__card__text">Carteado was founded in January, 2021, by four Brazilian friends,
                         who still
                         manage it together: Wesley
                         Dantas (SHSuperSonic),
                         Matheus Gomes (Fearinn), Marcos Bispo (Marck361) and João Silva (DeckInseto).
                     </p>
                 </div>
-                <img src="imgs/cardsbg.webp" alt="" class="about__bg">
+
             </div>
         </section>
+        <section id="partners" class="section">
+            <h2 class="section__title">Partners & sponsors</h2>
+            <div class="section__cards">
+                <div class="section__card">
+                    <h3 class="section__card__title">Metafy</h3>
+                    <p class="section__card__text">Metafy makes esports coaching easier and safer for both coaches and
+                        students. Learn from the best and take your abilities to the next level!
+                    </p>
+                    <p class="section__card__text">For a discount of 10% in any session, use the promo code
+                        <b>CARTEADO10</b>!
+                    </p>
+                    <img src="imgs/Copy of Shimmer Logo Transparent.png" alt="" class="section__card__logo logo-metafy">
+                </div>
+                <div class="section__card ">
+                    <h3 class="section__card__title">
+                        Atreeyo</h3>
+                    <p class="section__card__text">Atreeyo is a platform built to connect brands to gamers and creators
+                        of any level, helping them to find the best sponsorship deals!</p>
+
+                    <p class="section__card__text">To check the available campaigns, use the referral code
+                        <b>Carte9</b>!
+                    </p>
+                    <img src="imgs/mediakitAtreeyo/logo3.png" alt="" class="section__card__logo logo-atreeyo">
+                </div>
+                <div class="section__card ">
+                    <h3 class="section__card__title">
+                        Pokémon Blast News</h3>
+                    <img src="" alt="">
+                    <p class="section__card__text">Pokémon Blast News is one of the biggest sites/blogs in Portuguese
+                        dedicated to the Pokémon franchise. There, you can find content about TCG, GO, video game, anime
+                        etc.
+                    </p>
+                    <img src="imgs/Pokemon_Blast_News.png" alt="" class="section__card__logo logo-PBN">
+                </div>
+            </div>
+        </section>
+      <!--  <section id="contact" class="section"> 
+            <h2 class="section__title">Contact us</h2>
+            <div class="section__cards">
+                <div class="section__card">
+                    <p class="section__card__text">For feedback, business inqueries or just questions, feel free to
+                        contact us in any of our social medias, listed below.
+                    </p>
+                </div>
+                <a class="twitter-timeline" data-width="300" data-height="400"
+                    href="https://twitter.com/Carteados?ref_src=twsrc%5Etfw">Tweets by Carteados</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            </div>
+        </section> -->
     </main>
     <script src="js/main.js" type="module"></script>
 </body>

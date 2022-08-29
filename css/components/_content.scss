@@ -1,0 +1,151 @@
+@import '../abstract/variables';
+
+@import 'header';
+
+.section__bg {
+    display: inline-block;
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.main-images {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .set-image {
+        flex-grow: 1;
+        border-radius: 8px;
+        max-height: 350px;
+        max-width: calc(100% - 2rem);
+        margin-top: 0.5rem;
+    }
+
+}
+
+.section {
+    color: $color5;
+    height: auto;
+    padding: 1rem 0;
+    position: relative;
+
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .twitter-timeline {
+        width: 80%;
+
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh;
+        margin: 0 1rem;
+        width: calc(100% - 2rem);
+
+        .section__card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            color: $color2;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            padding: 1rem 1rem;
+            @include gradient ($color5, $color1);
+            
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+
+            &__title {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+
+            &__text {
+                align-self: start;
+                line-height: 150%;
+                font-size: 1rem;
+                margin-top: 0.5rem;
+            }
+
+            .logo-atreeyo {
+                display: block;
+                height: 80px;
+                max-width: 60%;
+                margin: 1rem auto 0 auto;
+            }
+
+            .logo-metafy {
+                display: block;
+                height: 80px;
+                max-width: 25%;
+                margin: 1rem auto 0 auto;
+            }
+
+            .logo-PBN {
+                display: block;
+                height: 100px;
+                max-width: 60%;
+                margin: 1rem auto 0 auto;
+            }
+        }
+
+
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+
+    .main-images {
+
+
+        .set-image {
+            display: inline-block;
+            max-width: 45%;
+            height: 25rem;
+            margin: 1rem 0;
+        }
+
+    }
+
+    .section {
+
+        .twitter-timeline {
+            width: 25%;
+
+        }
+
+        .section__cards {
+            flex-direction: row;
+            justify-content: space-around;
+            min-height: 0px;
+
+            .section__card {
+                max-width: calc(33% - 4rem);
+                margin-top: 0;
+                min-height: 100%;
+            }
+        }
+    }
+}
