@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    @include gradient ($color5, $color1);
+    background-color: $color2;
     font-weight: bold;
     height: auto;
     padding: 0 1rem;
@@ -20,7 +20,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: $color2;
+        color: $color1;
         padding: 0.5rem;
         text-decoration: none;
         width: 100%;
@@ -42,7 +42,7 @@
             text-align: left;
 
             &:hover {
-                @include gradient ($color2, $color4, $color3);
+                @include gradient ($color4, $color3);
                 background-clip: text;
                 color: transparent;
             }
@@ -63,21 +63,20 @@
             display: none;
             flex-direction: column;
             align-items: center;
-            @include gradient ($color5, $color1);
             padding: 0.5rem 1rem 1rem 1rem;
             width: calc(100% - 1rem);
 
             &__option {
                 display: flex;
-                border-bottom: 0.5px solid $color2;
+                border-bottom: 1px solid $color1;
                 box-sizing: border-box;
-                color: $color2;
+                color: $color1;
                 padding: 1rem 0.5rem;
                 text-decoration: none;
                 width: calc(100% - 1rem);
 
                 &:first-child {
-                    border-top:  2px solid $color2
+                    border-top: 1px solid $color1
                 }
             }
 
@@ -93,11 +92,16 @@
 
             .menu__button {
                 justify-self: start;
-                border: 2px solid $color2;
+                background: none;
+                border: 2px solid $color1;
                 border-radius: 5px;
-                color: $color2;
+                color: $color1;
                 height: 2.5rem;
                 width: 3.5rem;
+
+                svg {
+                    filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
+                }
             }
 
             .menu__socials {
@@ -106,7 +110,7 @@
                 width: 70%;
 
                 &__social {
-
+                    filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
                     margin-right: 0.5rem;
                     height: 24px;
                     transition: all 0.2s;
@@ -174,10 +178,8 @@
 
                 &__option {
                     border: none;
-                    color: $color2;
                     padding: 0;
                     margin-right: 1rem;
-                    padding-bottom: 0.5rem;
                     white-space: nowrap;
                     width: auto;
 
@@ -186,7 +188,9 @@
                     }
 
                     &:hover {
-                        border-bottom: 5px solid $color2;
+                        border-bottom: 2px solid $color1;
+                        background-color: rgba(256, 256, 256, 0.1);
+                        padding: 0.5rem;
 
                     }
 
@@ -200,3 +204,7 @@
     }
 }
 
+.other-page:hover::after {
+    margin-left: 0.1rem;
+    content: '\2197';
+}

@@ -17,15 +17,31 @@
 
 .main-images {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    .set-image {
-        flex-grow: 1;
-        border-radius: 8px;
-        max-height: 350px;
-        max-width: calc(100% - 2rem);
+    a {
         margin-top: 0.5rem;
+        flex-grow: 1;
+        max-width: calc(100% - 2rem);
+
+        &:hover {
+            transform: scale(1.05, 1);
+        }
+
+        .main-image {
+            border-radius: 8px;
+            max-height: 350px;
+            width: 100%;
+
+            &:hover,
+            &:focus {
+                border: none;
+                outline: none;
+                box-shadow: 0px 0px 1rem $color4;
+            }
+        }
     }
 
 }
@@ -63,12 +79,16 @@
             align-items: center;
             justify-content: center;
             flex-grow: 1;
-            color: $color2;
+            border: 2px solid $color1;
             border-radius: 8px;
+            color: $color1;
             margin-top: 0.5rem;
             padding: 1rem 1rem;
-            @include gradient ($color5, $color1);
-            
+            background-color: transparent;
+
+            &:hover {
+                border-color: $color4;
+            }
 
             &:first-child {
                 margin-top: 0;
@@ -88,26 +108,31 @@
                 margin-top: 0.5rem;
             }
 
-            .logo-atreeyo {
-                display: block;
-                height: 80px;
-                max-width: 60%;
-                margin: 1rem auto 0 auto;
+            .sponsor-link {
+
+                .logo-metafy {
+                    display: block;
+                    height: 80px;
+                    max-width: 100%;
+                    margin: 1rem auto 0 auto;
+                }
+
+                .logo-atreeyo {
+                    display: block;
+                    height: 80px;
+                    max-width: 100%;
+                    margin: 1rem auto 0 auto;
+                }
+
+                .logo-PBN {
+                    display: block;
+                    height: 100px;
+                    max-width: 100%;
+                    margin: 1rem auto 0 auto;
+                }
             }
 
-            .logo-metafy {
-                display: block;
-                height: 80px;
-                max-width: 25%;
-                margin: 1rem auto 0 auto;
-            }
 
-            .logo-PBN {
-                display: block;
-                height: 100px;
-                max-width: 60%;
-                margin: 1rem auto 0 auto;
-            }
         }
 
 
@@ -118,16 +143,18 @@
 @media screen and (min-width: 800px) {
 
     .main-images {
-
-
-        .set-image {
+        a {
             display: inline-block;
             max-width: 45%;
-            height: 25rem;
             margin: 1rem 0;
-        }
 
+            .main-image {
+                height: 25rem;
+                width: 100%
+            }
+        }
     }
+
 
     .section {
 
