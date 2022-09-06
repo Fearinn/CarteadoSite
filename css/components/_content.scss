@@ -52,6 +52,10 @@
     padding: 1rem 0;
     position: relative;
 
+    .twitter-timeline {
+        width: 100% !important;
+    }
+
     &__title {
         font-size: 2rem;
         font-weight: bold;
@@ -59,10 +63,6 @@
         text-align: center;
     }
 
-    .twitter-timeline {
-        width: 80%;
-
-    }
 
     &__cards {
         display: flex;
@@ -73,22 +73,17 @@
         margin: 0 1rem;
         width: calc(100% - 2rem);
 
+
         .section__card {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             flex-grow: 1;
             border: 2px solid $color1;
             border-radius: 8px;
             color: $color1;
             margin-top: 0.5rem;
             padding: 1rem 1rem;
-            background-color: transparent;
-
-            &:hover {
-                border-color: $color4;
-            }
 
             &:first-child {
                 margin-top: 0;
@@ -108,34 +103,60 @@
                 margin-top: 0.5rem;
             }
 
-            .sponsor-link {
-
-                .logo-metafy {
-                    display: block;
-                    height: 80px;
-                    max-width: 100%;
-                    margin: 1rem auto 0 auto;
-                }
-
-                .logo-atreeyo {
-                    display: block;
-                    height: 80px;
-                    max-width: 100%;
-                    margin: 1rem auto 0 auto;
-                }
-
-                .logo-PBN {
-                    display: block;
-                    height: 100px;
-                    max-width: 100%;
-                    margin: 1rem auto 0 auto;
-                }
+            .logo-metafy {
+                display: block;
+                height: 80px;
+                max-width: 100%;
+                margin: 1rem auto 0 auto;
             }
 
+            .logo-atreeyo {
+                display: block;
+                height: 80px;
+                max-width: 100%;
+                margin: 1rem auto 0 auto;
+            }
+
+            .logo-PBN {
+                display: block;
+                height: 100px;
+                max-width: 100%;
+                margin: 1rem auto 0 auto;
+            }
 
         }
 
+        .series-banner {
+            border: none;
+            height: 100%;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            padding: 0;
+        }
 
+        .contact__socials {
+            align-self: start;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            line-height: 200%;
+
+
+            &__container {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: start;
+                width: 100%;
+
+                .contact__socials__img {
+                    display: inline-block;
+                    flex-shrink: 0;
+                    margin: 0 0.5rem 0 0;
+                    max-height: 1.5rem;
+                    max-width: 1.5rem;
+                }
+            }
+        }
     }
 }
 
@@ -157,12 +178,6 @@
 
 
     .section {
-
-        .twitter-timeline {
-            width: 25%;
-
-        }
-
         .section__cards {
             flex-direction: row;
             justify-content: space-around;
@@ -173,6 +188,11 @@
                 margin-top: 0;
                 min-height: 100%;
             }
+
+            .twitter-timeline {
+                max-width: calc(33% - 4rem) !important;
+            }
         }
     }
+
 }

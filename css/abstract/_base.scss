@@ -21,6 +21,9 @@ h1, h2, h3 {
 
 a {
     color: inherit;
+    &:hover, &:focus {
+        color: $color4;
+    }
 }
 
 b {
