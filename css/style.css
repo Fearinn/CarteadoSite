@@ -24,6 +24,7 @@ h1, h2, h3 {
 
 a {
   color: inherit;
+  font-weight: bold;
 }
 a:hover, a:focus {
   color: #FF8C32;
@@ -403,6 +404,7 @@ b {
   position: relative;
 }
 .section__title {
+  color: #EEEEEE;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -477,6 +479,7 @@ b {
 }
 .section .contact__socials {
   align-self: start;
+  font-size: 1.1rem;
   font-weight: bold;
   line-height: 200%;
   margin-top: 0.5rem;

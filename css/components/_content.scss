@@ -54,6 +54,7 @@
 
 
     &__title {
+        color: $color1;
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 1rem;
@@ -145,6 +146,7 @@
 
     .contact__socials {
         align-self: start;
+        font-size: 1.1rem;
         font-weight: bold;
         line-height: 200%;
         margin-top: 0.5rem;
