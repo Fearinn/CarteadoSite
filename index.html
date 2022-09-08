@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="One of the most traditional Pokéon TCG online organizations, Carteado Challenges create fun and memorable experiences with online tournaments.">
+        content="One of the most traditional Pokémon TCG online organizations, Carteado Challenges create fun and memorable experiences with online tournaments.">
     <title>Carteado Challenges - Online PTCG Tournaments</title>
     <link rel="icon" type="image/x-icon" href="/imgs/CarteadoLogo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
             <h1 class="logo-header__name">Carteado Challenges</h1>
         </a>
         <nav class="menu">
-            <div class="menu__options closed" data-options='header'>
+            <div class="menu__options" id="menu-options" data-options='header'>
                 <a target="_blank" aria-label="go to tournaments page" href="https://play.limitlesstcg.com/organizer/54"
                     class="menu__options__option other-page">Play</a>
                 <a aria-label="skip to 'about'" href="#about" class="menu__options__option">About</a>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="menu__container">
-                <button aria-label="open options" class="menu__button" data-button="header"><svg
+                <button aria-label="open options" aria-controls="menu-options" class="menu__button" data-button="header"><svg
                         xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 26 26"
                         style=" fill:#1B1A17;">
                         <path
@@ -76,11 +76,11 @@
 
         <div class="main-images">
             <a target="_blank" aria-label="Download Pokémon TCG Online"
-                href="https://www.pokemon.com/us/pokemon-tcg/play-online/"><img title="Download Pokémon TCG Online"
+                href="https://www.pokemon.com/us/pokemon-tcg/play-online/"><img alt="Pokémon TCG Online's logo" title="Download Pokémon TCG Online"
                     src="imgs/PTCGO.webp" class="main-image"></a>
             <a target="_blank" aria-label="Learn about the Lost Origin set"
                 href="https://tcg.pokemon.com/en-us/expansions/lost-origin/"><img
-                    title="Learn about the Lost Origin set" src="imgs/Lost Origin wallpaper.webp" alt=""
+                    title="Learn about the Lost Origin set" src="imgs/Lost Origin wallpaper.webp" alt="Pokémon TCG Lost Origin set wallpaper"
                     class="main-image"></a>
         </div>
 
@@ -89,8 +89,7 @@
             <div class="section__cards">
                 <div class="section__card">
                     <h3 class="section__card__title">Carteado's mission</h3>
-                    <p class="section__card__text">Even thought IRL card games are great, many people don't have
-                        acess to them,
+                    <p class="section__card__text">Even thought IRL card games are great, many people can't enjoy the best of them,
                         for multiple reasons.</p>
                     <p class="section__card__text">With this in mind, Carteado tries to build a competitive, health and
                         acessible way to play
@@ -137,7 +136,7 @@
                         <b>STAR10</b>!
                     </p>
                     <a aria-label="Metafy" class="section__card__sponsor" target="_blank" href="https://metafy.gg"><img
-                            src="imgs/Metafy logo on white.webp" alt="" class="section__card__logo logo-metafy"></a>
+                            src="imgs/Metafy logo on white.webp" alt="Metafy's logo" class="section__card__logo logo-metafy"></a>
                 </div>
                 <div class="section__card ">
                     <h3 class="section__card__title">
@@ -149,7 +148,7 @@
                         <b>Carte9</b>!
                     </p>
                     <a aria-label="Atreeyo" class="section__card__sponsor" target="_blank"
-                        href="https://atreeyo.com"><img src="imgs/mediakitAtreeyo/logo3.webp" alt=""
+                        href="https://atreeyo.com"><img src="imgs/mediakitAtreeyo/logo3.webp" alt="Atreeyo's logo"
                             class="section__card__logo logo-atreeyo"></a>
                 </div>
                 <div class="section__card ">
@@ -162,7 +161,7 @@
                         etc.
                     </p>
                     <a aria-label="Pokémon Blast News" class="sponsor" target="_blank"
-                        href="https://www.poke-blast-news.net/"><img src="imgs/Pokemon_Blast_News.webp" alt=""
+                        href="https://www.poke-blast-news.net/"><img src="imgs/Pokemon_Blast_News.webp" alt="Pokémon Blast News's logo"
                             class="section__card__logo logo-PBN"></a>
                 </div>
             </div>
@@ -212,12 +211,13 @@
                             <p><a href="https://twitter.com/Carteados">@Carteados</a></p>
                         </div>
                     </adress>
+
                 </div>
-                <a aria-label="Carteado's Star Light Series" href="https://play.limitlesstcg.com/series/carteadostarlight/details" class="section__card series-link"><img class="series-link__banner"
-                        src="imgs/Star Light Series banner.png" alt=""></a>
-               <!-- <a class="twitter-timeline section__card" data-width="300" data-height="300" 
-                    href="https://twitter.com/Carteados?ref_src=twsrc%5Etfw">Tweets by Carteados</a> -->
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a aria-label="Carteado's Star Light Series" href="https://play.limitlesstcg.com/series/carteadostarlight/details" class="series-link"><img class="series-link__banner"
+                        src="imgs/Star-Light-Series-banner.webp" alt="Star Light Series's banner"></a>
+               <a class="twitter-timeline section__card" data-width="300" data-height="300" 
+                    href="https://twitter.com/Carteados?ref_src=twsrc%5Etfw">Tweets by Carteados</a> 
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
             </div>
         </section>
     </main>

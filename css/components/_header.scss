@@ -24,6 +24,12 @@
         text-transform: uppercase;
         width: 100%;
 
+        &:hover {
+            @include gradient ($color4, $color3);
+            background-clip: text;
+            color: transparent;
+        }
+
         &__img {
             background: url('../imgs/CarteadoLogo.webp') center / 100% no-repeat;
             display: inline-block;
@@ -39,12 +45,6 @@
             line-height: 150%;
             max-width: 240px;
             text-align: left;
-
-            &:hover {
-                @include gradient ($color4, $color3);
-                background-clip: text;
-                color: transparent;
-            }
         }
     }
 
