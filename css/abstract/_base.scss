@@ -8,8 +8,12 @@
 
 body {
     position: relative;
-    background-color: $color2;
+    background-color: rgba(0, 0, 0, 0.85);
     overflow-x: hidden;
+}
+
+main {
+    overflow-y: hidden;
 }
 
 h1, h2, h3 {

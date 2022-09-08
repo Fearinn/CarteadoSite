@@ -1,0 +1,40 @@
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: $color2;
+    color: $color1;
+    padding: 1rem;
+
+    &__logo {
+        display: inline-block;
+        background: url('../imgs/CarteadoLogo.png') center / 100% no-repeat;
+        height: 120px;
+        margin-right: 1rem;
+        min-width: 100px;
+        text-align: center;
+
+    }
+
+    .footer__disclaimers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .footer__disclaimer {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin: 0;
+            }
+
+        }
+
+        #copyright::before {
+            content: '\24B8';
+            margin-right: 0.1rem;
+
+        }
+
+    }
+
+}
