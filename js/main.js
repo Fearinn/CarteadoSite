@@ -17,9 +17,11 @@ function removeTwitterIndex() {
         element => element.setAttribute('tabindex', '-1')
     )
 
-} */
+}
 
 setTimeout(removeTwitterIndex, 10000)
+
+*/
 
 headerButton.addEventListener('click', () => {
     if (click == 0) {
