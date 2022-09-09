@@ -477,10 +477,6 @@ p {
   height: 100%;
   width: 100%;
 }
-.section__cards .twitter-timeline {
-  border: none;
-  width: 100% !important;
-}
 .section .contact__socials {
   align-self: start;
   font-size: 1.1rem;
@@ -530,9 +526,6 @@ p {
   }
   .section .section__cards .series-link__banner:hover {
     box-shadow: 0px 0px 0.5rem #FF8C32;
-  }
-  .section .twitter-timeline {
-    max-width: calc(33% - 4rem) !important;
   }
 }
 .footer {

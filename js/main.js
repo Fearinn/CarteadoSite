@@ -2,9 +2,9 @@ const headerButton = document.querySelector("[data-button='header']")
 
 const headerOptions = document.querySelector("[data-options='header']")
 
-const script = document.querySelector('script')
-
 var click = 0
+
+/* const script = document.querySelector('script')
 
 function removeTwitterIndex() {
     const twitter = document.querySelector('iframe')
@@ -17,7 +17,7 @@ function removeTwitterIndex() {
         element => element.setAttribute('tabindex', '-1')
     )
 
-}
+} */
 
 setTimeout(removeTwitterIndex, 10000)
 
