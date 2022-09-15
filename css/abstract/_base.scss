@@ -6,6 +6,10 @@
     min-width: 360px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     position: relative;
     background-color: rgba(0, 0, 0, 0.85);
