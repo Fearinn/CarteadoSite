@@ -553,6 +553,7 @@ p {
   justify-content: center;
 }
 .footer .footer__disclaimers .footer__disclaimer {
+  font-size: 0.975rem;
   margin-bottom: 1rem;
 }
 .footer .footer__disclaimers .footer__disclaimer:last-child {
