@@ -4,7 +4,7 @@ const headerOptions = document.querySelector("[data-options='header']")
 
 var click = 0
 
-/* const script = document.querySelector('script')
+const script = document.querySelector('script')
 
 function removeTwitterIndex() {
     const twitter = document.querySelector('iframe')
@@ -21,7 +21,6 @@ function removeTwitterIndex() {
 
 setTimeout(removeTwitterIndex, 10000)
 
-*/
 
 headerButton.addEventListener('click', () => {
     if (click == 0) {
