@@ -124,14 +124,15 @@
 
         }
 
-        .series-link {
-            border: none;
+        #series-link {
+            
             height: 100%;
             margin: 0.5rem 0;
             padding: 0;
             width: 100%;
 
             .series-link__banner {
+                border-radius: 8px;
                 height: 100%;
                 width: 100%;
             }
@@ -206,7 +207,7 @@ aside {
                 padding: 0;
             }
 
-            .series-link {
+            #series-link {
                 margin: 0;
                 max-width: 50%;
 

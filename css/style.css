@@ -470,14 +470,14 @@ p {
   margin: 1rem auto 0 auto;
   width: 100%;
 }
-.section__cards .series-link {
-  border: none;
+.section__cards #series-link {
   height: 100%;
   margin: 0.5rem 0;
   padding: 0;
   width: 100%;
 }
-.section__cards .series-link .series-link__banner {
+.section__cards #series-link .series-link__banner {
+  border-radius: 8px;
   height: 100%;
   width: 100%;
 }
@@ -529,19 +529,19 @@ aside {
     max-width: calc(50% - 0.5rem);
     padding: 0;
   }
-  .section #contact__content .series-link {
+  .section #contact__content #series-link {
     margin: 0;
     max-width: 50%;
   }
-  .section #contact__content .series-link:hover {
+  .section #contact__content #series-link:hover {
     border: none;
     outline: none;
     transform: scale(1.02, 1);
   }
-  .section #contact__content .series-link__banner {
+  .section #contact__content #series-link__banner {
     border-radius: 8px;
   }
-  .section #contact__content .series-link__banner:hover {
+  .section #contact__content #series-link__banner:hover {
     box-shadow: 0px 0px 0.5rem #FF8C32;
   }
 }
