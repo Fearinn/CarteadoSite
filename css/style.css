@@ -89,7 +89,7 @@ p {
   flex-direction: column-reverse;
   font-size: 1.3rem;
   height: 100%;
-  padding: 0rem 0.5rem 0 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
   text-transform: uppercase;
   width: 100%;
 }
@@ -120,7 +120,7 @@ p {
   width: 100%;
 }
 .header .menu__container .menu__button {
-  justify-self: start;
+  justify-self: flex-start;
   background: none;
   border: 2px solid #EEEEEE;
   border-radius: 5px;
@@ -154,7 +154,7 @@ p {
     z-index: 1;
   }
   .header .logo-header {
-    justify-content: start;
+    justify-content: flex-;
     border: none;
     margin-right: 1rem;
     width: auto;
@@ -167,7 +167,7 @@ p {
     display: none;
   }
   .header .menu__container {
-    justify-content: end;
+    justify-content: flex-end;
     max-width: 25%;
   }
   .header .menu__container .menu__socials {
@@ -252,7 +252,7 @@ p {
   flex-direction: column-reverse;
   font-size: 1.3rem;
   height: 100%;
-  padding: 0rem 0.5rem 0 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
   text-transform: uppercase;
   width: 100%;
 }
@@ -283,7 +283,7 @@ p {
   width: 100%;
 }
 .header .menu__container .menu__button {
-  justify-self: start;
+  justify-self: flex-start;
   background: none;
   border: 2px solid #EEEEEE;
   border-radius: 5px;
@@ -317,7 +317,7 @@ p {
     z-index: 1;
   }
   .header .logo-header {
-    justify-content: start;
+    justify-content: flex-;
     border: none;
     margin-right: 1rem;
     width: auto;
@@ -330,7 +330,7 @@ p {
     display: none;
   }
   .header .menu__container {
-    justify-content: end;
+    justify-content: flex-end;
     max-width: 25%;
   }
   .header .menu__container .menu__socials {
@@ -403,7 +403,7 @@ p {
 .main-images a .main-image:hover, .main-images a .main-image:focus {
   border: none;
   outline: none;
-  box-shadow: 0px 0px 1rem #FF8C32;
+  box-shadow: 0 0 1rem #FF8C32;
 }
 
 .section {
@@ -432,7 +432,7 @@ p {
   align-items: center;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: flex-start;
+  justify-content: flex-flex-start;
   border: 0.5px dashed #EEEEEE;
   border-radius: 8px;
   color: #EEEEEE;
@@ -448,7 +448,7 @@ p {
   text-align: center;
 }
 .section__cards .section__card__text {
-  align-self: start;
+  align-self: flex-start;
   line-height: 150%;
   margin-top: 0.5rem;
 }
@@ -482,7 +482,7 @@ p {
   width: 100%;
 }
 .section .contact__socials {
-  align-self: start;
+  align-self: flex-start;
   font-size: 1.1rem;
   font-weight: bold;
   line-height: 200%;
@@ -492,7 +492,7 @@ p {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
 }
 .section .contact__socials__container .contact__socials__img {
@@ -501,10 +501,6 @@ p {
   margin: 0 0.5rem 0 0;
   max-height: 1.5rem;
   max-width: 1.5rem;
-}
-
-aside {
-  display: none;
 }
 
 @media screen and (min-width: 800px) {
@@ -526,7 +522,7 @@ aside {
     margin-top: 0;
   }
   .section #contact__content {
-    align-items: flex-start;
+    align-items: flex-flex-start;
   }
   .section #contact__content .section__card {
     border: none;
@@ -546,18 +542,7 @@ aside {
     border-radius: 8px;
   }
   .section #contact__content #series-link__banner:hover {
-    box-shadow: 0px 0px 0.5rem #FF8C32;
-  }
-}
-@media (min-width: 1400px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    justify-content: center;
-    margin-right: 1rem;
-  }
-  aside {
-    display: block;
+    box-shadow: 0 0 0.5rem #FF8C32;
   }
 }
 .footer {

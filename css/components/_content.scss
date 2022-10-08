@@ -40,7 +40,7 @@
             &:focus {
                 border: none;
                 outline: none;
-                box-shadow: 0px 0px 1rem $color4;
+                box-shadow: 0 0 1rem $color4;
             }
         }
     }
@@ -77,7 +77,7 @@
             align-items: center;
             flex-direction: column;
             flex-grow: 1;
-            justify-content: flex-start;
+            justify-content: flex-flex-start;
             border: 0.5px dashed $color1;
             border-radius: 8px;
             color: $color1;
@@ -96,7 +96,7 @@
             }
 
             &__text {
-                align-self: start;
+                align-self: flex-start;
                 line-height: 150%;
                 margin-top: 0.5rem;
             }
@@ -141,7 +141,7 @@
     }
 
     .contact__socials {
-        align-self: start;
+        align-self: flex-start;
         font-size: 1.1rem;
         font-weight: bold;
         line-height: 200%;
@@ -151,7 +151,7 @@
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            justify-content: start;
+            justify-content: flex-start;
             width: 100%;
 
             .contact__socials__img {
@@ -164,12 +164,6 @@
         }
     }
 }
-
-aside {
-    display: none;
-}
-
-
 
 @media screen and (min-width: 800px) {
 
@@ -202,7 +196,7 @@ aside {
 
         #contact__content {
 
-            align-items: flex-start;
+            align-items: flex-flex-start;
 
             .section__card {
                 border: none;
@@ -225,24 +219,11 @@ aside {
                     border-radius: 8px;
 
                     &:hover {
-                        box-shadow: 0px 0px 0.5rem $color4;
+                        box-shadow: 0 0 0.5rem $color4;
                     }
                 }
             }
         }
     }
 
-}
-
-@media (min-width: 1400px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        justify-content: center;
-        margin-right: 1rem;
-    }
-
-    aside {
-        display: block;
-    }
 }
