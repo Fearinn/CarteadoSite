@@ -78,7 +78,7 @@
             flex-direction: column;
             flex-grow: 1;
             justify-content: flex-start;
-            border: 2px dashed $color1;
+            border: 0.5px dashed $color1;
             border-radius: 8px;
             color: $color1;
             margin-top: 0.5rem;
@@ -185,11 +185,14 @@ aside {
 
     .section {
 
+        border-top: 0.5px dashed $color1;
+
         .section__cards {
             flex-direction: row;
             justify-content: space-between;
 
             .section__card {
+                border: none;
                 max-width: calc(33% - 4rem);
                 margin-top: 0;
 

@@ -433,7 +433,7 @@ p {
   flex-direction: column;
   flex-grow: 1;
   justify-content: flex-start;
-  border: 2px dashed #EEEEEE;
+  border: 0.5px dashed #EEEEEE;
   border-radius: 8px;
   color: #EEEEEE;
   margin-top: 0.5rem;
@@ -513,11 +513,15 @@ aside {
     margin: 1rem 0;
     max-width: 45%;
   }
+  .section {
+    border-top: 0.5px dashed #EEEEEE;
+  }
   .section .section__cards {
     flex-direction: row;
     justify-content: space-between;
   }
   .section .section__cards .section__card {
+    border: none;
     max-width: calc(33% - 4rem);
     margin-top: 0;
   }
