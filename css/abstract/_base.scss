@@ -6,6 +6,10 @@
     min-width: 360px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -16,21 +20,29 @@ body {
     overflow-x: hidden;
 }
 
+body>* {
+    padding: 0 1rem;
+}
+
 main {
     overflow-y: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-transform: uppercase;
     font-family: 'Arvo', serif;
     font-weight: bold;
     letter-spacing: 0.1ch;
 }
 
-a {
+a:not(.menu__options__option, .logo-header) {
     color: inherit;
     font-weight: bold;
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
         color: $color4;
     }
 }

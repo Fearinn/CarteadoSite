@@ -5,6 +5,10 @@
   min-width: 360px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,22 +19,28 @@ body {
   overflow-x: hidden;
 }
 
+body > * {
+  padding: 0 1rem;
+}
+
 main {
   overflow-y: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
   font-family: "Arvo", serif;
   font-weight: bold;
   letter-spacing: 0.1ch;
 }
 
-a {
+a:not(.menu__options__option, .logo-header) {
   color: inherit;
   font-weight: bold;
 }
-a:hover, a:focus {
+a:not(.menu__options__option, .logo-header):hover, a:not(.menu__options__option, .logo-header):focus {
   color: #FF8C32;
 }
 
@@ -49,10 +59,10 @@ p {
   justify-content: space-between;
   background-color: #212121;
   font-weight: bold;
-  padding: 0 1rem;
   text-align: center;
 }
-.header .logo-header {
+
+.logo-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,13 +72,13 @@ p {
   text-transform: uppercase;
   width: 100%;
 }
-.header .logo-header:hover {
+.logo-header:hover {
   background-image: linear-gradient(to right, #FF8C32, #fad014);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
 }
-.header .logo-header__img {
+.logo-header__img {
   background: url("../imgs/CarteadoLogo.webp") center/100% no-repeat;
   display: inline-block;
   height: 120px;
@@ -76,14 +86,15 @@ p {
   min-width: 100px;
   text-align: center;
 }
-.header .logo-header__name {
+.logo-header__name {
   font-family: "Arvo", serif;
   font-size: 1.8rem;
   line-height: 150%;
   max-width: 240px;
   text-align: left;
 }
-.header .menu {
+
+.menu {
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
@@ -93,33 +104,35 @@ p {
   text-transform: uppercase;
   width: 100%;
 }
-.header .menu__options {
+
+.menu__options {
   display: none;
   align-items: center;
   flex-direction: column;
-  padding: 0.5rem 1rem 1rem 1rem;
-  width: calc(100% - 1rem);
+  padding: 1rem 0;
+  width: 100%;
 }
-.header .menu__options__option {
-  display: flex;
+.menu__options__option {
   border-bottom: 1px solid #EEEEEE;
   box-sizing: border-box;
   color: #EEEEEE;
   padding: 1rem 0.5rem;
+  text-align: start;
   text-decoration: none;
-  width: calc(100% - 1rem);
+  width: 100%;
 }
-.header .menu__options__option:first-child {
+.menu__options__option:first-child {
   border-top: 1px solid #EEEEEE;
 }
-.header .menu__container {
+
+.menu__socials-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   padding-bottom: 0.5rem;
   width: 100%;
 }
-.header .menu__container .menu__button {
+
+.menu__button {
   justify-self: flex-start;
   background: none;
   border: 2px solid #EEEEEE;
@@ -128,21 +141,21 @@ p {
   height: 2.5rem;
   width: 3.5rem;
 }
-.header .menu__container .menu__button svg {
+.menu__button svg {
   filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
 }
-.header .menu__container .menu__socials {
+
+.menu__socials {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
-.header .menu__container .menu__socials__social {
+.menu__socials__social {
   filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
-  margin-right: 0.5rem;
   height: 24px;
   transition: all 0.5s;
 }
-.header .menu__container .menu__socials__social:hover {
+.menu__socials__social:hover {
   transform: translateY(-25%);
 }
 
@@ -153,27 +166,27 @@ p {
     justify-content: space-between;
     z-index: 1;
   }
-  .header .logo-header {
-    justify-content: flex-;
+  .logo-header {
+    justify-content: flex-start;
     border: none;
     margin-right: 1rem;
     width: auto;
   }
-  .header .menu {
+  .menu {
     flex-direction: row;
     justify-content: space-around;
   }
-  .header .menu__button {
+  .menu__button {
     display: none;
   }
-  .header .menu__container {
+  .menu__socials-container {
     justify-content: flex-end;
     max-width: 25%;
   }
-  .header .menu__container .menu__socials {
+  .menu__socials-container .menu__socials {
     width: 100%;
   }
-  .header .menu .menu__options {
+  .menu__options {
     display: flex;
     background: none;
     flex-direction: row;
@@ -181,186 +194,19 @@ p {
     justify-content: space-around;
     padding: 0;
   }
-  .header .menu .menu__options__option {
+  .menu__options__option {
     border: none;
-    margin-right: 1rem;
     padding: 0;
     white-space: nowrap;
     width: auto;
   }
-  .header .menu .menu__options__option:first-child {
+  .menu__options__option:first-child {
     border-top: none;
   }
-  .header .menu .menu__options__option:hover {
+  .menu__options__option:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid #EEEEEE;
     padding: 0.5rem;
-  }
-  .header .sociais {
-    max-width: 25%;
-  }
-}
-.other-page:after {
-  margin-left: 0.1rem;
-  content: "↗";
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #212121;
-  font-weight: bold;
-  padding: 0 1rem;
-  text-align: center;
-}
-.header .logo-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #EEEEEE;
-  padding: 0.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
-}
-.header .logo-header:hover {
-  background-image: linear-gradient(to right, #FF8C32, #fad014);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-}
-.header .logo-header__img {
-  background: url("../imgs/CarteadoLogo.webp") center/100% no-repeat;
-  display: inline-block;
-  height: 120px;
-  margin-right: 1rem;
-  min-width: 100px;
-  text-align: center;
-}
-.header .logo-header__name {
-  font-family: "Arvo", serif;
-  font-size: 1.8rem;
-  line-height: 150%;
-  max-width: 240px;
-  text-align: left;
-}
-.header .menu {
-  display: flex;
-  align-items: center;
-  flex-direction: column-reverse;
-  font-size: 1.3rem;
-  height: 100%;
-  padding: 0 0.5rem 0 0.5rem;
-  text-transform: uppercase;
-  width: 100%;
-}
-.header .menu__options {
-  display: none;
-  align-items: center;
-  flex-direction: column;
-  padding: 0.5rem 1rem 1rem 1rem;
-  width: calc(100% - 1rem);
-}
-.header .menu__options__option {
-  display: flex;
-  border-bottom: 1px solid #EEEEEE;
-  box-sizing: border-box;
-  color: #EEEEEE;
-  padding: 1rem 0.5rem;
-  text-decoration: none;
-  width: calc(100% - 1rem);
-}
-.header .menu__options__option:first-child {
-  border-top: 1px solid #EEEEEE;
-}
-.header .menu__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-bottom: 0.5rem;
-  width: 100%;
-}
-.header .menu__container .menu__button {
-  justify-self: flex-start;
-  background: none;
-  border: 2px solid #EEEEEE;
-  border-radius: 5px;
-  color: #EEEEEE;
-  height: 2.5rem;
-  width: 3.5rem;
-}
-.header .menu__container .menu__button svg {
-  filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
-}
-.header .menu__container .menu__socials {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-.header .menu__container .menu__socials__social {
-  filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
-  margin-right: 0.5rem;
-  height: 24px;
-  transition: all 0.5s;
-}
-.header .menu__container .menu__socials__social:hover {
-  transform: translateY(-25%);
-}
-
-@media screen and (min-width: 1024px) {
-  .header {
-    flex-direction: row;
-    font-size: 1rem;
-    justify-content: space-between;
-    z-index: 1;
-  }
-  .header .logo-header {
-    justify-content: flex-;
-    border: none;
-    margin-right: 1rem;
-    width: auto;
-  }
-  .header .menu {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .header .menu__button {
-    display: none;
-  }
-  .header .menu__container {
-    justify-content: flex-end;
-    max-width: 25%;
-  }
-  .header .menu__container .menu__socials {
-    width: 100%;
-  }
-  .header .menu .menu__options {
-    display: flex;
-    background: none;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-around;
-    padding: 0;
-  }
-  .header .menu .menu__options__option {
-    border: none;
-    margin-right: 1rem;
-    padding: 0;
-    white-space: nowrap;
-    width: auto;
-  }
-  .header .menu .menu__options__option:first-child {
-    border-top: none;
-  }
-  .header .menu .menu__options__option:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-bottom: 2px solid #EEEEEE;
-    padding: 0.5rem;
-  }
-  .header .sociais {
-    max-width: 25%;
   }
 }
 .other-page:after {
@@ -371,36 +217,38 @@ p {
 .bg {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  opacity: 0.05;
-  bottom: 0;
-  z-index: -1;
   background-image: url("../imgs/cardsbg.webp");
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0.05;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .main-images {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 0 0 0 0;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .main-images a {
   margin-top: 0.5rem;
   flex-grow: 0;
-  width: calc(100% - 2rem);
+  width: 100%;
 }
 .main-images a:hover {
   transform: scale(1.02, 1);
 }
-.main-images a .main-image {
+.main-images a img {
+  aspect-ratio: 16/9;
   border-radius: 8px;
   height: 100%;
   width: 100%;
 }
-.main-images a .main-image:hover, .main-images a .main-image:focus {
+.main-images a img:hover, .main-images a img:focus {
   border: none;
   outline: none;
   box-shadow: 0 0 1rem #FF8C32;
@@ -412,6 +260,7 @@ p {
   padding: 1rem 0;
   position: relative;
 }
+
 .section__title {
   color: #EEEEEE;
   font-size: 2rem;
@@ -419,20 +268,21 @@ p {
   margin-bottom: 1rem;
   text-align: center;
 }
+
 .section__cards {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
   margin: 0 auto;
-  width: calc(100% - 2rem);
+  width: 100%;
 }
 .section__cards .section__card {
   display: flex;
   align-items: center;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: flex-flex-start;
+  justify-content: flex-start;
   border: 0.5px dashed #EEEEEE;
   border-radius: 8px;
   color: #EEEEEE;
@@ -452,51 +302,45 @@ p {
   line-height: 150%;
   margin-top: 0.5rem;
 }
-.section__cards .section__card .logo-metafy {
-  display: block;
-  height: 80px;
+.section__cards .section__card img {
+  aspect-ratio: 16/9;
   margin: 1rem auto 0 auto;
+  max-height: 100px;
   width: 100%;
 }
-.section__cards .section__card .logo-atreeyo {
-  display: block;
-  height: 80px;
-  margin: 1rem auto 0 auto;
+
+.contact__content .section__card {
   width: 100%;
 }
-.section__cards .section__card .logo-PBN {
-  display: block;
-  height: 80px;
-  margin: 1rem auto 0 auto;
-  width: 100%;
-}
-.section__cards #series-link {
+
+.contact__img {
   height: 100%;
   margin: 0.5rem 0;
   padding: 0;
   width: 100%;
 }
-.section__cards #series-link__banner {
+.contact__img img {
+  aspect-ratio: 16/9;
   border-radius: 8px;
   height: 100%;
   width: 100%;
 }
-.section .contact__socials {
+
+.contact__socials {
   align-self: flex-start;
   font-size: 1.1rem;
   font-weight: bold;
   line-height: 200%;
   margin-top: 0.5rem;
 }
-.section .contact__socials__container {
+.contact__socials__container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
 }
-.section .contact__socials__container .contact__socials__img {
-  display: inline-block;
+.contact__socials__container .contact__socials__img {
   flex-shrink: 0;
   margin: 0 0.5rem 0 0;
   max-height: 1.5rem;
@@ -505,43 +349,42 @@ p {
 
 @media screen and (min-width: 800px) {
   .main-images a {
-    display: inline-block;
     margin: 1rem 0;
     max-width: 45%;
   }
   .section {
     border-top: 0.5px dashed #EEEEEE;
   }
-  .section .section__cards {
+  .section__cards {
     flex-direction: row;
     justify-content: space-between;
   }
-  .section .section__cards .section__card {
+  .section__cards .section__card {
     border: none;
     max-width: calc(33% - 4rem);
     margin-top: 0;
   }
-  .section #contact__content {
-    align-items: flex-flex-start;
+  .contact__content {
+    align-items: flex-start;
   }
-  .section #contact__content .section__card {
+  .contact__content .section__card {
     border: none;
     max-width: calc(50% - 0.5rem);
     padding: 0;
   }
-  .section #contact__content #series-link {
+  .contact__img {
     margin: 0;
     max-width: 50%;
   }
-  .section #contact__content #series-link:hover {
+  .contact__img:hover {
     border: none;
     outline: none;
     transform: scale(1.02, 1);
   }
-  .section #contact__content #series-link__banner {
+  .contact__img img {
     border-radius: 8px;
   }
-  .section #contact__content #series-link__banner:hover {
+  .contact__img img:hover {
     box-shadow: 0 0 0.5rem #FF8C32;
   }
 }
@@ -553,7 +396,6 @@ p {
   padding: 1rem;
 }
 .footer__logo {
-  display: inline-block;
   background: url("../imgs/CarteadoLogo2.webp") center/100% no-repeat;
   height: 120px;
   margin-right: 1rem;

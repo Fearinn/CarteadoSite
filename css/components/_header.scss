@@ -4,6 +4,7 @@
     background-image: linear-gradient(to right, $first-color, $second-color);
 }
 
+
 .header {
     display: flex;
     flex-direction: column;
@@ -11,193 +12,113 @@
     justify-content: space-between;
     background-color: $color2;
     font-weight: bold;
-    padding: 0 1rem;
     text-align: center;
 
-    .logo-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color1;
+    padding: 0.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover {
+        @include gradient ($color4, $color3);
+        background-clip: text;
+        color: transparent;
+    }
+
+    &__img {
+        background: url('../imgs/CarteadoLogo.webp') center / 100% no-repeat;
+        display: inline-block;
+        height: 120px;
+        margin-right: 1rem;
+        min-width: 100px;
+        text-align: center;
+    }
+
+    &__name {
+        font-family: 'Arvo', serif;
+        font-size: 1.8rem;
+        line-height: 150%;
+        max-width: 240px;
+        text-align: left;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    font-size: 1.3rem;
+    height: 100%;
+    padding: 0 0.5rem 0 0.5rem;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.menu__options {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0;
+    width: 100%;
+
+    &__option {
+        border-bottom: 1px solid $color1;
+        box-sizing: border-box;
         color: $color1;
-        padding: 0.5rem;
+        padding: 1rem 0.5rem;
+        text-align: start;
         text-decoration: none;
-        text-transform: uppercase;
         width: 100%;
+
+        &:first-child {
+            border-top: 1px solid $color1
+        }
+    }
+}
+
+.menu__socials-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+.menu__button {
+    justify-self: flex-start;
+    background: none;
+    border: 2px solid $color1;
+    border-radius: 5px;
+    color: $color1;
+    height: 2.5rem;
+    width: 3.5rem;
+
+    svg {
+        filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
+    }
+}
+
+.menu__socials {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    &__social {
+        filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
+        height: 24px;
+        transition: all 0.5s;
 
         &:hover {
-            @include gradient ($color4, $color3);
-            background-clip: text;
-            color: transparent;
-        }
-
-        &__img {
-            background: url('../imgs/CarteadoLogo.webp') center / 100% no-repeat;
-            display: inline-block;
-            height: 120px;
-            margin-right: 1rem;
-            min-width: 100px;
-            text-align: center;
-        }
-
-        &__name {
-            font-family: 'Arvo', serif;
-            font-size: 1.8rem;
-            line-height: 150%;
-            max-width: 240px;
-            text-align: left;
-        }
-    }
-
-    .menu {
-        display: flex;
-        align-items: center;
-        flex-direction: column-reverse;
-        font-size: 1.3rem;
-        height: 100%;
-        padding: 0 0.5rem 0 0.5rem;
-        text-transform: uppercase;
-        width: 100%;
-
-
-        &__options {
-            display: none;
-            align-items: center;
-            flex-direction: column;
-            padding: 0.5rem 1rem 1rem 1rem;
-            width: calc(100% - 1rem);
-
-            &__option {
-                display: flex;
-                border-bottom: 1px solid $color1;
-                box-sizing: border-box;
-                color: $color1;
-                padding: 1rem 0.5rem;
-                text-decoration: none;
-                width: calc(100% - 1rem);
-
-                &:first-child {
-                    border-top: 1px solid $color1
-                }
-            }
-
-        }
-
-        &__container {
-
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding-bottom: 0.5rem;
-            width: 100%;
-
-            .menu__button {
-                justify-self: flex-start;
-                background: none;
-                border: 2px solid $color1;
-                border-radius: 5px;
-                color: $color1;
-                height: 2.5rem;
-                width: 3.5rem;
-
-                svg {
-                    filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
-                }
-            }
-
-            .menu__socials {
-                display: flex;
-                justify-content: space-around;
-                width: 100%;
-
-                &__social {
-                    filter: invert(100%) sepia(84%) saturate(228%) hue-rotate(208deg) brightness(118%) contrast(87%);
-                    margin-right: 0.5rem;
-                    height: 24px;
-                    transition: all 0.5s;
-
-                    &:hover {
-                        transform: translateY(-25%);
-                    }
-
-
-                }
-            }
+            transform: translateY(-25%);
         }
 
     }
-
 }
 
-@media screen and (min-width: 1024px) {
-    .header {
-        flex-direction: row;
-        font-size: 1rem;
-        justify-content: space-between;
-        z-index: 1;
-
-        .logo-header {
-            justify-content: flex-;
-            border: none;
-            margin-right: 1rem;
-            width: auto;
-        }
-
-
-        .menu {
-            flex-direction: row;
-            justify-content: space-around;
-
-
-            &__button {
-                display: none;
-            }
-
-            &__container {
-                justify-content: flex-end;
-                max-width: 25%;
-
-                .menu__socials {
-                    width: 100%;
-                }
-            }
-
-            .menu__options {
-                display: flex;
-                background: none;
-                flex-direction: row;
-                flex-grow: 1;
-                justify-content: space-around;
-                padding: 0;
-
-                &__option {
-                    border: none;
-                    margin-right: 1rem;
-                    padding: 0;
-                    white-space: nowrap;
-                    width: auto;
-
-                    &:first-child {
-                        border-top: none;
-                    }
-
-                    &:hover {
-                        background-color: rgba(256, 256, 256, 0.1);
-                        border-bottom: 2px solid $color1;
-                        padding: 0.5rem;
-
-                    }
-
-                }
-            }
-        }
-
-        .sociais {
-            max-width: 25%;
-        }
-    }
-}
-
-.other-page:after {
-    margin-left: 0.1rem;
-    content: '\2197';
-}
+@import '../views/header';

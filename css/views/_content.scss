@@ -1,0 +1,55 @@
+@media screen and (min-width: 800px) {
+
+    .main-images {
+        a {
+            margin: 1rem 0;
+            max-width: 45%;
+        }
+    }
+
+    .section {
+        border-top: 0.5px dashed $color1;
+    }
+
+    .section__cards {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .section__card {
+            border: none;
+            max-width: calc(33% - 4rem);
+            margin-top: 0;
+        }
+    }
+
+    // contact
+
+    .contact__content {
+        align-items: flex-start;
+
+        .section__card {
+            border: none;
+            max-width: calc(50% - 0.5rem);
+            padding: 0;
+        }
+    }
+
+    .contact__img {
+        margin: 0;
+        max-width: 50%;
+
+        &:hover {
+            border: none;
+            outline: none;
+            transform: scale(1.02, 1);
+        }
+
+        img {
+            border-radius: 8px;
+
+            &:hover {
+                box-shadow: 0 0 0.5rem $color4;
+            }
+        }
+    }
+}
