@@ -273,8 +273,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: space-between;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 1rem;
   width: 100%;
 }
 .section__cards .section__card {
@@ -286,7 +286,6 @@ p {
   border: 0.5px dashed #EEEEEE;
   border-radius: 8px;
   color: #EEEEEE;
-  margin-top: 0.5rem;
   padding: 1rem 1rem;
 }
 .section__cards .section__card:first-child {
@@ -357,12 +356,9 @@ p {
   }
   .section__cards {
     flex-direction: row;
-    justify-content: space-between;
   }
   .section__cards .section__card {
     border: none;
-    max-width: calc(33% - 4rem);
-    margin-top: 0;
   }
   .contact__content {
     align-items: flex-start;

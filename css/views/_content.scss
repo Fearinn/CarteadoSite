@@ -13,12 +13,9 @@
 
     .section__cards {
         flex-direction: row;
-        justify-content: space-between;
 
         .section__card {
             border: none;
-            max-width: calc(33% - 4rem);
-            margin-top: 0;
         }
     }
 

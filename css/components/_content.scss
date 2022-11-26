@@ -68,8 +68,8 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: space-between;
-    margin: 0 auto;
+    justify-content: center;
+    gap: 1rem;
     width: 100%;
 
     .section__card {
@@ -81,7 +81,6 @@
         border: 0.5px dashed $color1;
         border-radius: 8px;
         color: $color1;
-        margin-top: 0.5rem;
         padding: 1rem 1rem;
 
         &:first-child {
