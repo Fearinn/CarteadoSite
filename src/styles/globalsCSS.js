@@ -11,7 +11,7 @@ export const colors = {
 export const GlobalStyles = createGlobalStyle`
 
   :where(html) {
-  // font-family: ;
+  font-family: 'Roboto', sans-serif;
   }
 
   :where(body) {
@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
  :where(h1, h2, h3) {
   text-transform: uppercase;
   letter-spacing: 0.1ch;
- // font-family: ;
+ font-family: 'Arvo', serif;
   font-weight: bold;
  }
 

@@ -14,16 +14,9 @@ gap: 1rem;
   }
 
   .cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1rem;
-    width: 100%;
-
-    @media (min-width: 1024px) {
-      flex-direction: row;
-      align-items: stretch;
-    }
 
     .card {
       display: flex;
