@@ -12,7 +12,7 @@ const StyledLogo = styled.a`
     transition: 0.2s all linear;
 
     &:hover {
-      background-image: linear-gradient(to right, ${colors['styleLevel2']}, ${colors['styleLevel1']});
+      background-image: linear-gradient(to right, ${colors["styleLevel2"]}, ${colors["styleLevel1"]});
       background-clip: initial;
       -webkit-background-clip: text;
       color: transparent;

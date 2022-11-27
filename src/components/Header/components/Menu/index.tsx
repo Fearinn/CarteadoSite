@@ -1,6 +1,5 @@
 import StyledMenu from "./styles";
 import config from "data/en/header.json";
-;
 import { useEffect, useState } from "react";
 
 const options = config.options;

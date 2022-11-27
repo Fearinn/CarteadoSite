@@ -40,7 +40,7 @@ const StyledMenu = styled.nav`
 
   .menu-button {
     justify-self: flex-start;
-    background: url('/button.svg') no-repeat center;
+    background: url("images/button.svg") no-repeat center;
     border: 2px solid ${colors.fontBase};
     border-radius: 5px;
     color: ${colors.fontBase};
