@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { colors } from "styles/globalsCSS";
+import {Link} from "react-router-dom"
 
-const StyledLogo = styled.a`
+const StyledLogo = styled(Link)`
 
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
     padding: 0.5rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -22,9 +24,9 @@ const StyledLogo = styled.a`
     .img {
       background: url("/images/CarteadoLogo.webp") center / 100% no-repeat;
       display: inline-block;
-      height: 120px;
-      margin-right: 1rem;
-      min-width: 100px;
+      aspect-ratio: 10/12;
+      height: auto;
+      width: 100px;
       text-align: center;
     }
 

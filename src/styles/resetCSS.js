@@ -12,25 +12,18 @@ const CSSReset = createGlobalStyle`
   :where(body) {
     font-family: inherit;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    min-width: 320px;
   }
-  /* NextJS */
   :where(html) {
     display: flex;
     flex-direction: column;
     min-height: 100%;
     min-width: 320px;
   }
-  :where(body) {
-    display: flex;
-    flex-direction: column;
-   // flex: 1;
-  }
-  #__next {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-  }
-  /* Globals */
+
   :where(button,
   a) {
     text-decoration: none;

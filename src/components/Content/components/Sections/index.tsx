@@ -1,6 +1,6 @@
 import StyledSection from "./styles";
 
-import config from "data/en/content.json";
+import config from "data/content.json";
 import Contact from "./Contact";
 
 interface ICard {
@@ -17,7 +17,7 @@ function Sections() {
     <>
       {sections.map((section, index) => {
         return (
-          <StyledSection key={index}>
+          <StyledSection id={section.title} key={index}>
             <>
               <h2>{section.title}</h2>
               <div className="cards">

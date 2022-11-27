@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Logo from "./components/Logo";
 import Menu from "./components/Menu";
 
@@ -10,6 +11,7 @@ function Header() {
         <Logo />
         <Menu />
       </StyledHeader>
+      <Outlet />
     </>
   );
 }

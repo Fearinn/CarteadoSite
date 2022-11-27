@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { colors } from "styles/globalsCSS";
 
 const StyledMenu = styled.nav`
@@ -32,7 +31,7 @@ const StyledMenu = styled.nav`
         border-top: 1px solid ${colors.fontBase};
       }
 
-      &[target="_blank"]::after {
+      &:not([target="_self"])::after {
         content: "\\2197";
       }
     }

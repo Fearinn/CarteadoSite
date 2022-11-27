@@ -3,7 +3,7 @@ import { colors } from "styles/globalsCSS";
 
 const StyledMainImages = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(calc(320px - 2rem), 1fr));
   gap: 1rem;
 
   a {
