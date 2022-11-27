@@ -7,7 +7,7 @@ const StyledContent = styled.main`
   padding: 1rem;
 
   .bg {
-    background-image: url("images/cardsbg.webp");
+    background-image: url("/images/cardsbg.webp");
     background-size: 100%;
     bottom: 0;
     left: 0;

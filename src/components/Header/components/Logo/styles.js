@@ -20,7 +20,7 @@ const StyledLogo = styled.a`
 
 
     .img {
-      background: url("/CarteadoLogo.webp") center / 100% no-repeat;
+      background: url("/images/CarteadoLogo.webp") center / 100% no-repeat;
       display: inline-block;
       height: 120px;
       margin-right: 1rem;

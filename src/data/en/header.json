@@ -6,16 +6,16 @@
     { "name": "contact", "label": "skip to 'contact'", "link": "#" }
   ],
   "socials": [
-    { "name": "twitter", "logo": "/twitter.svg", "link": "https://twitter.com/Carteados" },
+    { "name": "twitter", "logo": "/images/twitter.svg", "link": "https://twitter.com/Carteados" },
     {
       "name": "twitch",
-      "logo": "/twitch.svg",
+      "logo": "/images/twitch.svg",
       "link": "https://www.twitch.tv/shsupersonic"
     },
     {
       "name": "Discord",
 
-      "logo": "/discord.svg",
+      "logo": "/images/discord.svg",
       "link": "https://discord.com/invite/e23kfK9QcS"
     }
   ]

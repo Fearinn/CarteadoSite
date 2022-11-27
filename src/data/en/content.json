@@ -23,13 +23,13 @@
         {
           "title": "Pokémon Blast News",
           "content": "Pokémon Blast News is one of the biggest sites in Portuguese dedicated to the Pokémon franchise. Content includes anime, video game, TCG and more.",
-          "image": "/Pokemon_Blast_News.webp",
+          "image": "/images/Pokemon_Blast_News.webp",
           "link": "https://www.poke-blast-news.net/"
         },
         {
           "title": "Atreeyo",
           "content": "Atreeyo is a platform build to connect brands to content creators and players of all leves and help them to find the best sponsorship deals!",
-          "image": "/logo3.webp",
+          "image": "/images/logo3.webp",
           "link": "https://atreeyo.com/"
         }
       ]
