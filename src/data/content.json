@@ -1,38 +1,78 @@
 {
-  "sections": [
-    {
-      "title": "about us",
-      "cards": [
-        {
-          "title": "Carteado's mission",
-          "content": "Even thought IRL card games are great, many people can't enjoy the best of them, for multiple reasons. With this in mind, Carteado tries to build a competitive, health and acessible way to play Pokémon TCG from your own house."
-        },
-        {
-          "title": "PTCG Online Tournaments",
-          "content": "Carteado runs weekly Pokémon Trading Card Game online tournaments, always with free entry and generally open for everyone from anywhere. Events are managed through the Limitless Online Tournament Platform."
-        },
-        {
-          "title": "Who is behind Carteado?",
-          "content": "Carteado was founded in January, 2021, by four Brazilian friends, who still manage it together: Wesley Dantas (SHSuperSonic), Matheus Gomes (Fearinn), Marcos Bispo (Marck261) and João Silva (DeckInseto)."
-        }
-      ]
-    },
-    {
-      "title": "affiliates & sponsors",
-      "cards": [
-        {
-          "title": "Pokémon Blast News",
-          "content": "Pokémon Blast News is one of the biggest sites in Portuguese dedicated to the Pokémon franchise. Content includes anime, video game, TCG and more.",
-          "image": "/images/Pokemon_Blast_News.webp",
-          "link": "https://www.poke-blast-news.net/"
-        },
-        {
-          "title": "Atreeyo",
-          "content": "Atreeyo is a platform build to connect brands to content creators and players of all leves and help them to find the best sponsorship deals!",
-          "image": "/images/logo3.webp",
-          "link": "https://atreeyo.com/"
-        }
-      ]
-    }
-  ]
+  "en": {
+    "sections": [
+      {
+        "title": "about us",
+        "cards": [
+          {
+            "title": "Carteado's mission",
+            "content": "Even thought IRL card games are great, many people can't enjoy the best of them, for multiple reasons. With this in mind, Carteado tries to build a competitive, health and acessible way to play Pokémon TCG from your own house."
+          },
+          {
+            "title": "PTCG Online Tournaments",
+            "content": "Carteado runs weekly Pokémon Trading Card Game online tournaments, always with free entry and generally open for everyone from anywhere. Events are managed through the Limitless Online Tournament Platform."
+          },
+          {
+            "title": "Who is behind Carteado?",
+            "content": "Carteado was founded in January, 2021, by four Brazilian friends, who still manage it together: Wesley Dantas (SHSuperSonic), Matheus Gomes (Fearinn), Marcos Bispo (Marck261) and João Silva (DeckInseto)."
+          }
+        ]
+      },
+      {
+        "title": "affiliates & sponsors",
+        "cards": [
+          {
+            "title": "Pokémon Blast News",
+            "content": "Pokémon Blast News is one of the biggest sites in Portuguese dedicated to the Pokémon franchise. Content includes anime, video game, TCG and more.",
+            "image": "/images/Pokemon_Blast_News.webp",
+            "link": "https://www.poke-blast-news.net/"
+          },
+          {
+            "title": "Atreeyo",
+            "content": "Atreeyo é uma plataforma desenvolvida para conectar marcas a jogadores e criadores de conteúdo de todos os nível, ajudando-os a encontrar os melhores acordos de patrocínio!Para checar as campanhas disponíveis, use o código Carte9!",
+            "image": "/images/logo3.webp",
+            "link": "https://atreeyo.com/"
+          }
+        ]
+      }
+    ]
+  },
+  "ptBr": {
+    "sections": [
+      {
+        "title": "sobre nós",
+        "cards": [
+          {
+            "title": "missão do carteado",
+            "content": "Apesar de card games físicos serem ótimos, muitos não podem aproveitar o melhor deles, por diversos motivos. Com isso em mente, o Carteado tenta construir um modo competitivo, saudável e acessível de jogar o Pokémon TCG, da sua própria casa."
+          },
+          {
+            "title": "torneios online de PTCG",
+            "content": "O Carteado realiza torneios online semanais de Pokémon Estampas Ilustradas, todos gratuitos e geralmente abertos para todos de qualquer lugar. Os eventos são gerenciados por meio da Limitless Online Tournament Platform."
+          },
+          {
+            "title": "Quem está por trás do Carteado?",
+            "content": "O Carteado foi fundado em janeiro de 2021, por quatro amigos brasileiros, os quais ainda o gerenciam juntos: Wesley Dantas (SHSuperSonic), Matheus Gomes (Fearinn), Marcos Bispo (Marck261) and João Silva (DeckInseto)."
+          }
+        ]
+      },
+      {
+        "title": "afiliados e patrocinadores",
+        "cards": [
+          {
+            "title": "Pokémon Blast News",
+            "content": "Pokémon Blast News é um dos maiores blogs/sites em Português dedicados à franquia Pokémon! Lá, você pode encontrar conteúdo sobre TCG, GO, video game, anime etc.",
+            "image": "/images/Pokemon_Blast_News.webp",
+            "link": "https://www.poke-blast-news.net/"
+          },
+          {
+            "title": "Atreeyo",
+            "content": "Atreeyo é uma plataforma desenvolvida para conectar marcas a jogadores e criadores de conteúdo de todos os nível, ajudando-os a encontrar os melhores acordos de patrocínio! Para checar as campanhas disponíveis, use o código Carte9!",
+            "image": "/images/logo3.webp",
+            "link": "https://atreeyo.com/"
+          }
+        ]
+      }
+    ]
+  }
 }

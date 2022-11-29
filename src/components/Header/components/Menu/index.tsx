@@ -1,18 +1,39 @@
 import StyledMenu from "./styles";
 import config from "data/header.json";
-import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import useLang from "hooks/useLang";
+
+function getWindowSize() {
+  const { innerWidth } = window;
+  return { innerWidth };
+}
 
 function Menu() {
-  const [open, setOpen] = useState(true);
-  const params = useParams();
+  const [open, setOpen] = useState(false);
+  const [windowSize, setWindowSize] = useState(getWindowSize());
 
-  type Lang = keyof typeof config
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+      if (windowSize.innerWidth >= 1024) {setOpen(true)}
+    }
 
-  const lang: Lang = params.lang as Lang || "english" as Lang
+    handleWindowResize() 
+    
+    window.addEventListener("resize", handleWindowResize);
 
- const options = config[lang].options;
-  const socials = config.english.socials;
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, [windowSize.innerWidth]);
+
+  type Lang = keyof typeof config;
+
+  const { lang } = useLang();
+
+  const options = config[lang as Lang].options;
+  const socials = config[lang as Lang].socials;
 
   return (
     <StyledMenu>
@@ -32,8 +53,8 @@ function Menu() {
               </a>
             );
           })}
-          <Link className="option" to="/pt-br">
-            PT-BR
+          <Link className="option" to={lang === "ptBr" ? "/" : "/ptBr"}>
+            {lang === "ptBr" ? "EN-US" : "PT-BR"}
           </Link>
         </div>
       )}

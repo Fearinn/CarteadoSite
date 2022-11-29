@@ -7,7 +7,6 @@ export const colors = {
   styleLevel2: "#FF8C32",
 };
 
-
 export const GlobalStyles = createGlobalStyle`
 
   :where(html) {
@@ -20,11 +19,14 @@ export const GlobalStyles = createGlobalStyle`
   }
  ;
 
- :where(h1, h2, h3) {
+ :where(h1, h2, h3, h4, h5, h6) {
   text-transform: uppercase;
   letter-spacing: 0.1ch;
  font-family: "Arvo", serif;
   font-weight: bold;
+  @media (max-width: 320px) {
+    word-break: break-all;
+  } 
  }
 
  :where(a):hover {

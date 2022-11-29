@@ -1,14 +1,14 @@
 {
-  "english": {
+  "en": {
     "options": [
       {
         "name": "play",
         "label": "go to tournaments page",
         "link": "https://play.limitlesstcg.com/organizer/54"
       },
-      { "name": "about", "label": "skip to 'about us'", "link": "#" },
-      { "name": "partners", "label": "skip to 'partners'", "link": "#" },
-      { "name": "contact", "label": "skip to 'contact'", "link": "#" }
+      { "name": "about", "label": "skip to 'about us'", "link": "#about" },
+      { "name": "affiliates", "label": "skip to 'affiliates'", "link": "#affiliates" },
+      { "name": "contact", "label": "skip to 'contact'", "link": "#contact" }
     ],
     "socials": [
       {
@@ -29,7 +29,7 @@
       }
     ]
   },
-  "pt-br": {
+  "ptBr": {
     "options": [
       {
         "name": "jogue",

@@ -1,23 +1,39 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import StyledSection from "./styles";
 
 import config from "data/content.json";
 import Contact from "./Contact";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import useLang from "hooks/useLang";
 
 interface ICard {
   title: string;
   content: string;
-  link?: string;
   image?: string;
+  link?: string;
 }
 
-const sections = config.sections;
+type Lang = keyof typeof config;
 
 function Sections() {
+  const params = useParams();
+  
+  const {lang, setLang} = useLang()
+  
+  useEffect(() => {
+    setLang(params.lang || "en");
+  }, [params.lang]);
+
+  const sections = config[lang as Lang].sections;
   return (
     <>
       {sections.map((section, index) => {
+        const title = section.title;
+        const slicedTitle = title.slice(0, title.indexOf(" "));
+
         return (
-          <StyledSection id={section.title} key={index}>
+          <StyledSection id={slicedTitle} key={index}>
             <>
               <h2>{section.title}</h2>
               <div className="cards">
@@ -51,8 +67,8 @@ function Sections() {
           </StyledSection>
         );
       })}
-      <StyledSection>
-        <h2>Contact Us</h2>
+      <StyledSection id="contact">
+        <h2>{lang === "ptBr" ? "contate-nos" : "contact Us"}</h2>
         <Contact />
       </StyledSection>
     </>
