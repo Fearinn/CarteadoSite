@@ -30,7 +30,11 @@ export const GlobalStyles = createGlobalStyle`
  }
 
  :where(a):hover {
-    color: ${colors.styleLevel2}
+    color: ${colors.styleLevel2};
+  }
+
+  p a {
+    text-decoration: underline;
   }
  
  `;

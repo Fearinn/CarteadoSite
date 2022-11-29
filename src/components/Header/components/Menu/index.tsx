@@ -11,29 +11,38 @@ function getWindowSize() {
 
 function Menu() {
   const [open, setOpen] = useState(false);
+  const { lang } = useLang();
   const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  type Lang = keyof typeof config;
+
+  const options = config[lang as Lang].options;
+  const socials = config[lang as Lang].socials;
+
+  useEffect(() => {
+    if (lang === "ptBr") {
+      document.documentElement.lang = "pt-br";
+    } else {
+      document.documentElement.lang = "en";
+    }
+  }, [lang]);
 
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
-      if (windowSize.innerWidth >= 1024) {setOpen(true)}
+      if (windowSize.innerWidth >= 1024) {
+        setOpen(true);
+      }
     }
 
-    handleWindowResize() 
-    
+    handleWindowResize();
+
     window.addEventListener("resize", handleWindowResize);
 
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, [windowSize.innerWidth]);
-
-  type Lang = keyof typeof config;
-
-  const { lang } = useLang();
-
-  const options = config[lang as Lang].options;
-  const socials = config[lang as Lang].socials;
 
   return (
     <StyledMenu>
