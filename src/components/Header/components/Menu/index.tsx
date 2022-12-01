@@ -47,7 +47,7 @@ function Menu() {
   return (
     <StyledMenu>
       {open && (
-        <div className="options">
+        <div className="options" id="menu-options">
           {options.map((option, index) => {
             return (
               <a
@@ -68,7 +68,9 @@ function Menu() {
         </div>
       )}
       <div className="socials-container">
-        <button className="menu-button" onClick={() => setOpen(!open)}></button>
+
+        <button className="menu-button" aria-label="open options" aria-controls="menu-options" onClick={() => setOpen(!open)}></button>
+
         <div className="socials">
           {socials.map((social, index) => {
             return (
@@ -76,7 +78,7 @@ function Menu() {
                 className="social"
                 target="_blank"
                 key={index}
-                aria-label=""
+                aria-label={`Go to our ${social.name}`}
                 href={social.link}
                 rel="noreferrer"
               >

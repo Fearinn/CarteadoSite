@@ -49,6 +49,7 @@ function Sections() {
                               target="_blank"
                               href={card.link}
                               rel="noreferrer"
+                              aria-label={card.title}
                             >
                               <img
                                 src={card.image}

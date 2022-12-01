@@ -14,18 +14,20 @@
       {
         "name": "twitter",
         "logo": "/images/twitter.svg",
-        "link": "https://twitter.com/Carteados"
+        "link": "https://twitter.com/Carteados",
+        "label": "go to twitter"
       },
       {
         "name": "twitch",
         "logo": "/images/twitch.svg",
-        "link": "https://www.twitch.tv/shsupersonic"
+        "link": "https://www.twitch.tv/shsupersonic",
+        "label": "go to twitch"
       },
       {
         "name": "Discord",
-
         "logo": "/images/discord.svg",
-        "link": "https://discord.com/invite/e23kfK9QcS"
+        "link": "https://discord.com/invite/e23kfK9QcS",
+        "label": "go to discord"
       }
     ]
   },
@@ -36,30 +38,32 @@
         "label": "vá para a página de torneios",
         "link": "https://play.limitlesstcg.com/organizer/54"
       },
-      { "name": "sobre", "label": "pule para 'sobre nós'", "link": "#" },
+      { "name": "sobre", "label": "pule para 'sobre nós'", "link": "#sobre" },
       {
         "name": "afiliados",
         "label": "pule pars 'afiliados'",
-        "link": "#"
+        "link": "#afiliados"
       },
-      { "name": "contato", "label": "pule para 'contato'", "link": "#" }
+      { "name": "contato", "label": "pule para 'contato'", "link": "#contact" }
     ],
     "socials": [
       {
         "name": "twitter",
         "logo": "/images/twitter.svg",
-        "link": "https://twitter.com/Carteados"
+        "link": "https://twitter.com/Carteados",
+        "label": "vá para o twitter"
       },
       {
         "name": "twitch",
         "logo": "/images/twitch.svg",
-        "link": "https://www.twitch.tv/shsupersonic"
+        "link": "https://www.twitch.tv/shsupersonic",
+        "label": "vá para a twitch"
       },
       {
         "name": "Discord",
-
         "logo": "/images/discord.svg",
-        "link": "https://discord.com/invite/e23kfK9QcS"
+        "link": "https://discord.com/invite/e23kfK9QcS",
+        "label": "vá para o discord"
       }
     ]
   }

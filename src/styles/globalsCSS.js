@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
 
   :where(html) {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
   }
 
   :where(body) {
