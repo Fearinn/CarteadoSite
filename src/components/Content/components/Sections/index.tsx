@@ -1,34 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import StyledSection from "./styles";
 
-import config from "data/content.json";
+import main from "data/content.json";
 import Contact from "./Contact";
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
 import useLang from "hooks/useLang";
-
-interface ICard {
-  title: string;
-  content: string;
-  image?: string;
-  link?: string;
-}
-
-type Lang = keyof typeof config;
+import { ICard, IMainLang, ISection, LangKey } from "interfaces/main";
 
 function Sections() {
-  const params = useParams();
-  
-  const {lang, setLang} = useLang()
-  
-  useEffect(() => {
-    setLang(params.lang || "en");
-  }, [params.lang]);
+  const { lang } = useLang();
 
-  const sections = config[lang as Lang].sections;
+  const LangObject: IMainLang = main[lang as LangKey];
+
+  const sections: ISection[] = LangObject.sections;
+
   return (
     <>
-      {sections.map((section, index) => {
+      {sections.map((section: ISection, index) => {
         const title = section.title;
         const slicedTitle = title.slice(0, title.indexOf(" "));
 

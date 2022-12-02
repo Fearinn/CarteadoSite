@@ -1,8 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import StyledMenu from "./styles";
-import config from "data/header.json";
+import header from "data/header.json";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useLang from "hooks/useLang";
+import { IOption, ISocial, LangKey } from "interfaces/header";
 
 function getWindowSize() {
   const { innerWidth } = window;
@@ -11,21 +13,25 @@ function getWindowSize() {
 
 function Menu() {
   const [open, setOpen] = useState(false);
-  const { lang } = useLang();
+  const { lang, setLang } = useLang();
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
-  type Lang = keyof typeof config;
+  const options: IOption[] = header[lang as LangKey].options;
+  const socials: ISocial[] = header[lang as LangKey].socials;
 
-  const options = config[lang as Lang].options;
-  const socials = config[lang as Lang].socials;
+  const params = useParams()
 
   useEffect(() => {
+
+    setLang(params.lang || "en");
+
     if (lang === "ptBr") {
       document.documentElement.lang = "pt-br";
     } else {
       document.documentElement.lang = "en";
     }
-  }, [lang]);
+
+  }, [params.lang])
 
   useEffect(() => {
     function handleWindowResize() {
@@ -48,7 +54,7 @@ function Menu() {
     <StyledMenu>
       {open && (
         <div className="options" id="menu-options">
-          {options.map((option, index) => {
+          {options.map((option: IOption, index) => {
             return (
               <a
                 target={!option.link.includes("#") ? "_blank" : "_self"}
@@ -72,7 +78,7 @@ function Menu() {
         <button className="menu-button" aria-label="open options" aria-controls="menu-options" onClick={() => setOpen(!open)}></button>
 
         <div className="socials">
-          {socials.map((social, index) => {
+          {socials.map((social: ISocial, index) => {
             return (
               <a
                 className="social"
