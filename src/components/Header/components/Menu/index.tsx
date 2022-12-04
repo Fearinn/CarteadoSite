@@ -74,7 +74,7 @@ function Menu() {
       <div className="socials-container">
         <button
           className="menu-button"
-          aria-label={optionsOpen ? "close options" : "optionsOpen options"}
+          aria-label={optionsOpen ? "close options" : "open options"}
           aria-controls={optionsOpen ? "menu-options" : undefined}
           onClick={() => setOptionsOpen(!optionsOpen)}
         ></button>
