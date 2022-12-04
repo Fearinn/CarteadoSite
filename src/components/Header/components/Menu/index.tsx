@@ -12,17 +12,16 @@ function getWindowSize() {
 }
 
 function Menu() {
-  const [open, setOpen] = useState(false);
+  const [optionsOpen, setOptionsOpen] = useState(false);
   const { lang, setLang } = useLang();
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   const options: IOption[] = header[lang as LangKey].options;
   const socials: ISocial[] = header[lang as LangKey].socials;
 
-  const params = useParams()
+  const params = useParams();
 
   useEffect(() => {
-
     setLang(params.lang || "en");
 
     if (lang === "ptBr") {
@@ -30,14 +29,13 @@ function Menu() {
     } else {
       document.documentElement.lang = "en";
     }
-
-  }, [params.lang])
+  }, [params.lang]);
 
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
       if (windowSize.innerWidth >= 1024) {
-        setOpen(true);
+        setOptionsOpen(true);
       }
     }
 
@@ -52,7 +50,7 @@ function Menu() {
 
   return (
     <StyledMenu>
-      {open && (
+      {optionsOpen && (
         <div className="options" id="menu-options">
           {options.map((option: IOption, index) => {
             return (
@@ -74,8 +72,12 @@ function Menu() {
         </div>
       )}
       <div className="socials-container">
-
-        <button className="menu-button" aria-label="open options" aria-controls="menu-options" onClick={() => setOpen(!open)}></button>
+        <button
+          className="menu-button"
+          aria-label={optionsOpen ? "close options" : "optionsOpen options"}
+          aria-controls={optionsOpen ? "menu-options" : undefined}
+          onClick={() => setOptionsOpen(!optionsOpen)}
+        ></button>
 
         <div className="socials">
           {socials.map((social: ISocial, index) => {
