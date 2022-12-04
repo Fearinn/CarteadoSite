@@ -25,9 +25,6 @@ export const GlobalStyles = createGlobalStyle`
   letter-spacing: 0.1ch;
  font-family: "Arvo", serif;
   font-weight: bold;
-  @media (max-width: 320px) {
-    word-break: break-all;
-  } 
  }
 
  :where(a):hover {

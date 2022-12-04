@@ -22,6 +22,10 @@ const CSSReset = createGlobalStyle`
     flex-direction: column;
     min-height: 100%;
     min-width: 320px;
+
+    @media (max-width: 360px) {
+      font-size: 14px;
+    }
   }
 
   :where(button,
@@ -33,4 +37,4 @@ const CSSReset = createGlobalStyle`
   
 `;
 
-export default CSSReset
+export default CSSReset;
